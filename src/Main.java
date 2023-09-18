@@ -17,6 +17,7 @@ public class Main {
         ContactList.add(new PhonebookEntry("Rachel","+347 9852 741"));
         ContactList.add(new PhonebookEntry("Rachel","+347 388 700"));
 
+
         System.out.println(ContactList);
 
         PhonebookEntry foundContact=ContactList.find("Monica");
