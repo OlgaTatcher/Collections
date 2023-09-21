@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Phonebook  {
-    private List<PhonebookEntry> contactInfo;
+    private List<PhonebookRecord> contactInfo;
 
     public Phonebook() {
         contactInfo =new ArrayList<>();
@@ -15,13 +15,13 @@ public class Phonebook  {
         return "Contact: " + contactInfo;
     }
 
-    public void add(PhonebookEntry phonebookEntry){
-        contactInfo.add(phonebookEntry);
+    public void add(PhonebookRecord phonebookRecord){
+        contactInfo.add(phonebookRecord);
     }
-    public PhonebookEntry find(String name){
-        for (PhonebookEntry phonebookEntry: contactInfo) {
-            if (phonebookEntry.getName().equals(name)){
-                return phonebookEntry;
+    public PhonebookRecord find(String name){
+        for (PhonebookRecord phonebookRecord : contactInfo) {
+            if (phonebookRecord.getName().equals(name)){
+                return phonebookRecord;
             }
             
         }
@@ -29,10 +29,10 @@ public class Phonebook  {
     }
 
 
-    public List<PhonebookEntry>  findInfo(String name) {
-        List<PhonebookEntry> contact = new ArrayList<>();
-        for (PhonebookEntry phonebookEntry : contactInfo){
-        if (phonebookEntry.getName().equalsIgnoreCase(name))contact.add(phonebookEntry);
+    public List<PhonebookRecord>  findInfo(String name) {
+        List<PhonebookRecord> contact = new ArrayList<>();
+        for (PhonebookRecord phonebookRecord : contactInfo){
+        if (phonebookRecord.getName().equalsIgnoreCase(name))contact.add(phonebookRecord);
             }
         if (contact.isEmpty())return null;
 
